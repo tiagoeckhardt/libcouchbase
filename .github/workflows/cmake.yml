@@ -22,10 +22,4 @@ jobs:
     - name: Check directory 
       run: ls -lhtr && sudo apt-get install perl && sudo wget -O - https://packages.couchbase.com/clients/c/repos/deb/couchbase.key | sudo apt-key add - && echo "deb https://packages.couchbase.com/clients/c/repos/deb/ubuntu2004 focal focal/main" | sudo tee /etc/apt/sources.list.d/couchbase.list && sudo apt update && sudo apt-get install libcouchbase-dev libcouchbase3-libev build-essential
     - name: Make build directory and go to directory 
-      run: mkdir build && cd build
-    - name: Configure
-      run: ../configure.pl
-    - name: make
-      run: make
-    - name: Test
-      run: ctest
+      run: ls -lhtr && cd libcouchbase && ls -lhtr
