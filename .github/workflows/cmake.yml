@@ -24,7 +24,7 @@ jobs:
     - name: Make build directory and go to directory 
       run: mkdir build && cd build
     - name: Configure
-      run: ../cmake/configure
+      run: ../configure.pl
     - name: make
       run: make
     - name: Test
