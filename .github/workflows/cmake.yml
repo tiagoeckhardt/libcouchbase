@@ -22,4 +22,4 @@ jobs:
     - name: Check directory 
       run: sudo wget -O - https://packages.couchbase.com/clients/c/repos/deb/couchbase.key | sudo apt-key add - && echo "deb https://packages.couchbase.com/clients/c/repos/deb/ubuntu2004 focal focal/main" | sudo tee /etc/apt/sources.list.d/couchbase.list && sudo apt update && sudo apt-get install libcouchbase3 libcouchbase-dev libcouchbase3-tools libcouchbase-dbg libcouchbase3-libev libcouchbase3-libevent
     - name: Test command
-      run: bash -x insert.sh
+      run: bash -x /.github/workflow/insert.sh
