@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Check directory 
+      run: ls -lhtr
     - name: Make build directory and go to directory 
       run: cd libcouchbase && mkdir build && cd build
     - name: Configure
