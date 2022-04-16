@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Make build directory and go to directory 
+      run: cd libcouchbase && mkdir build && cd build
+    - name: Configure
+      run: ../cmake/configure
+    - name: make
+      run: make
+    - name: Test
+      run: ctest
