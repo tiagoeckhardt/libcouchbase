@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Check directory 
-      run: ls -lhtr
+      run: ls -lhtr && sudo apt-get install perl
     - name: Make build directory and go to directory 
       run: mkdir build && cd build
     - name: Configure
